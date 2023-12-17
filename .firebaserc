@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angularfirebasedeploy"
+  },
+  "targets": {
+    "angularfirebasedeploy": {
+      "hosting": {
+        "knowledge": [
+          "angularfirebasedeploy"
+        ]
+      }
+    }
+  }
+}

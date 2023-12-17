@@ -1,49 +1,15 @@
-<div class="box">
-    <span class="text">x</span>
-    <span class="text2">Text 2</span>
+<!-- <input placeholder="label" value="value"> -->
 
-
+<div class="veg_list">
+    <h1>Firebase Deploy</h1>
+    <hr>
+    <h3 *ngFor="let vegetable of vegetables; index as i">{{i+1}} - {{ vegetable.vegName }}</h3>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <form [formGroup]="studentForm" (ngSubmit)="addProduct()">
-
-    <input placeholder="Student Name" formControlName="name">
-    <input placeholder="Student email" formControlName="email">
-    <input placeholder="Student student_course" formControlName="student_course">
-    <input placeholder="Student fee" formControlName="fee">
-    <button type="submit" *ngIf="!selectedStudentId">Add Student</button>
-    <button *ngIf="selectedStudentId" (click)="updateStudent()">Update</button>
-
-
-
-</form>
-
-
-<ul>
-    <li *ngFor="let st of students; trackBy:studentName" (dblclick)="onEdit(st)">
-        {{st.name}} | {{st.fee}}
-        <button (click)="deleteItem(st)">Delete</button>
-    </li>
-</ul> -->
+<mat-form-field>
+    <mat-select placeholder="Placeholder" [(ngModel)]="selectedValue" name="item">
+        <mat-option *ngFor="let item of vegetables" [value]="item">
+            {{item}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
