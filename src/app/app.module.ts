@@ -11,6 +11,8 @@ import { SwiperModule } from 'swiper/angular';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    BrowserAnimationsModule,
+    MatButtonModule
 
   ],
   providers: [],

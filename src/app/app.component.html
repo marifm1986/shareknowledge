@@ -1,15 +1,33 @@
 <!-- <input placeholder="label" value="value"> -->
 
+
 <div class="veg_list">
+    <h1>Firebase Deploy</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Filter</mat-label>
+        <mat-select placeholder="Placeholder" [(ngModel)]="selectedFilter" name="item">
+            <mat-option *ngFor="let item of filter" [value]="item.id">
+                {{item.value}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Add New Whish</mat-label>
+            <input matInput placeholder="Add New" name="new-item" [(ngModel)]="itemText">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" (click)="addNewItem($event)">Add</button>
+    </form>
+    <!-- <hr> -->
+    <label for="newItem" *ngFor="let item of filteredItems; index as i">
+        <input type="checkbox" [id]="i" [checked]="item.isDone" (click)="onCheckItem(item)">
+        {{i+1}} - {{ item.wishText }}
+    </label>
+
+</div>
+<!-- <div class="veg_list">
     <h1>Firebase Deploy</h1>
     <hr>
     <h3 *ngFor="let vegetable of vegetables; index as i">{{i+1}} - {{ vegetable.vegName }}</h3>
-</div>
-
-<mat-form-field>
-    <mat-select placeholder="Placeholder" [(ngModel)]="selectedValue" name="item">
-        <mat-option *ngFor="let item of vegetables" [value]="item">
-            {{item}}
-        </mat-option>
-    </mat-select>
-</mat-form-field>
+</div> -->
